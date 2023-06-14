@@ -1,0 +1,14 @@
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.vbproj.AssemblyReference.cache
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.vbproj.SuggestedBindingRedirects.cache
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.FormMenuUtama.resources
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.FormLogin.resources
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.Resources.resources
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.vbproj.GenerateResource.cache
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.vbproj.CoreCompileInputs.cache
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\vbLogin.exe.config
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\vbLogin.exe
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\vbLogin.pdb
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\vbLogin.xml
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.exe
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.xml
+C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\obj\Debug\vbLogin.pdb
