@@ -10,11 +10,11 @@
         Call Terkunci()
     End Sub
 
-    Private Sub KeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KeluarToolStripMenuItem.Click
-        Me.Close()
-    End Sub
-
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
         FormLogin.ShowDialog()
+    End Sub
+
+    Private Sub KeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KeluarToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class
