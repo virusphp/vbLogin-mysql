@@ -23,84 +23,20 @@ Partial Class FormMenuUtama
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SubUnitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PegawaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JadwalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.MenuStrip1.SuspendLayout()
+        Me.RibbonControlUtama = New Syncfusion.Windows.Forms.Tools.RibbonControlAdv()
+        Me.MenuMaster = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
+        Me.ToolStripEx1 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
+        Me.btnLogin = New System.Windows.Forms.ToolStripButton()
+        Me.btnLogout = New System.Windows.Forms.ToolStripButton()
+        Me.btnExit = New System.Windows.Forms.ToolStripButton()
+        Me.MenuPesanan = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
+        CType(Me.RibbonControlUtama, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RibbonControlUtama.SuspendLayout()
+        Me.MenuMaster.Panel.SuspendLayout()
+        Me.ToolStripEx1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MasterToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(981, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ToolStripMenuItem1, Me.KeluarToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'LoginToolStripMenuItem
-        '
-        Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LoginToolStripMenuItem.Text = "Login"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
-        '
-        'KeluarToolStripMenuItem
-        '
-        Me.KeluarToolStripMenuItem.Name = "KeluarToolStripMenuItem"
-        Me.KeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.KeluarToolStripMenuItem.Text = "Keluar"
-        '
-        'MasterToolStripMenuItem
-        '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubUnitToolStripMenuItem, Me.PegawaiToolStripMenuItem, Me.JadwalToolStripMenuItem})
-        Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
-        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.MasterToolStripMenuItem.Text = "Master"
-        '
-        'SubUnitToolStripMenuItem
-        '
-        Me.SubUnitToolStripMenuItem.Name = "SubUnitToolStripMenuItem"
-        Me.SubUnitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SubUnitToolStripMenuItem.Text = "Sub Unit"
-        '
-        'PegawaiToolStripMenuItem
-        '
-        Me.PegawaiToolStripMenuItem.Name = "PegawaiToolStripMenuItem"
-        Me.PegawaiToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PegawaiToolStripMenuItem.Text = "Pegawai"
-        '
-        'JadwalToolStripMenuItem
-        '
-        Me.JadwalToolStripMenuItem.Name = "JadwalToolStripMenuItem"
-        Me.JadwalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.JadwalToolStripMenuItem.Text = "Jadwal"
         '
         'ContextMenuStrip1
         '
@@ -112,32 +48,141 @@ Partial Class FormMenuUtama
         Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
         Me.ContextMenuStrip2.Size = New System.Drawing.Size(61, 4)
         '
+        'RibbonControlUtama
+        '
+        Me.RibbonControlUtama.CaptionFont = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RibbonControlUtama.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Top
+        Me.RibbonControlUtama.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.RibbonControlUtama.Header.AddMainItem(MenuMaster)
+        Me.RibbonControlUtama.Header.AddMainItem(MenuPesanan)
+        Me.RibbonControlUtama.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonControlUtama.MenuButtonFont = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.RibbonControlUtama.MenuButtonText = ""
+        Me.RibbonControlUtama.MenuColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.RibbonControlUtama.Name = "RibbonControlUtama"
+        Me.RibbonControlUtama.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Managed
+        '
+        'RibbonControlUtama.OfficeMenu
+        '
+        Me.RibbonControlUtama.OfficeMenu.Name = "OfficeMenu"
+        Me.RibbonControlUtama.OfficeMenu.ShowItemToolTips = True
+        Me.RibbonControlUtama.OfficeMenu.Size = New System.Drawing.Size(12, 65)
+        Me.RibbonControlUtama.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.RibbonControlUtama.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None
+        Me.RibbonControlUtama.SelectedTab = Me.MenuMaster
+        Me.RibbonControlUtama.ShowRibbonDisplayOptionButton = True
+        Me.RibbonControlUtama.Size = New System.Drawing.Size(753, 130)
+        Me.RibbonControlUtama.SystemText.QuickAccessDialogDropDownName = "Start menu"
+        Me.RibbonControlUtama.SystemText.RenameDisplayLabelText = "&Display Name:"
+        Me.RibbonControlUtama.TabIndex = 2
+        Me.RibbonControlUtama.Text = "Pesanan"
+        Me.RibbonControlUtama.ThemeName = "Office2007"
+        Me.RibbonControlUtama.ThemeStyle.MoreCommandsStyle.PropertyGridViewBorderColor = System.Drawing.Color.FromArgb(CType(CType(171, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(171, Byte), Integer))
+        '
+        'MenuMaster
+        '
+        Me.MenuMaster.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuMaster.Name = "MenuMaster"
+        '
+        'RibbonControlUtama.RibbonPanel1
+        '
+        Me.MenuMaster.Panel.Controls.Add(Me.ToolStripEx1)
+        Me.MenuMaster.Panel.Name = "RibbonPanel1"
+        Me.MenuMaster.Panel.ScrollPosition = 0
+        Me.MenuMaster.Panel.TabIndex = 2
+        Me.MenuMaster.Panel.Text = "System"
+        Me.MenuMaster.Position = 0
+        Me.MenuMaster.Size = New System.Drawing.Size(54, 21)
+        Me.MenuMaster.Tag = "1"
+        Me.MenuMaster.Text = "System"
+        '
+        'ToolStripEx1
+        '
+        Me.ToolStripEx1.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStripEx1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.ToolStripEx1.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.ToolStripEx1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStripEx1.Image = Nothing
+        Me.ToolStripEx1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnLogin, Me.btnLogout, Me.btnExit})
+        Me.ToolStripEx1.Location = New System.Drawing.Point(0, 1)
+        Me.ToolStripEx1.Name = "ToolStripEx1"
+        Me.ToolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ToolStripEx1.Size = New System.Drawing.Size(282, 74)
+        Me.ToolStripEx1.TabIndex = 0
+        '
+        'btnLogin
+        '
+        Me.btnLogin.AutoSize = False
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Image = Global.vbLogin.My.Resources.Resources.kunci
+        Me.btnLogin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(100, 53)
+        Me.btnLogin.Text = "Login"
+        '
+        'btnLogout
+        '
+        Me.btnLogout.AutoSize = False
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Image = Global.vbLogin.My.Resources.Resources.logout
+        Me.btnLogout.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(100, 53)
+        Me.btnLogout.Text = "Logout"
+        '
+        'btnExit
+        '
+        Me.btnExit.AutoSize = False
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Image = Global.vbLogin.My.Resources.Resources._exit
+        Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 53)
+        Me.btnExit.Text = "Exit"
+        '
+        'MenuPesanan
+        '
+        Me.MenuPesanan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuPesanan.Name = "MenuPesanan"
+        '
+        'RibbonControlUtama.RibbonPanel2
+        '
+        Me.MenuPesanan.Panel.Name = "RibbonPanel2"
+        Me.MenuPesanan.Panel.ScrollPosition = 0
+        Me.MenuPesanan.Panel.TabIndex = 3
+        Me.MenuPesanan.Panel.Text = "Pesanan"
+        Me.MenuPesanan.Position = 1
+        Me.MenuPesanan.Size = New System.Drawing.Size(58, 21)
+        Me.MenuPesanan.Tag = "2"
+        Me.MenuPesanan.Text = "Pesanan"
+        '
         'FormMenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(981, 458)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ClientSize = New System.Drawing.Size(753, 458)
+        Me.Controls.Add(Me.RibbonControlUtama)
+        Me.IsMdiContainer = True
         Me.Name = "FormMenuUtama"
-        Me.Text = "FormMenuUtama"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Text = "Sistem Informasi Gudang Farmasi"
+        CType(Me.RibbonControlUtama, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RibbonControlUtama.ResumeLayout(False)
+        Me.RibbonControlUtama.PerformLayout()
+        Me.MenuMaster.Panel.ResumeLayout(False)
+        Me.MenuMaster.Panel.PerformLayout()
+        Me.ToolStripEx1.ResumeLayout(False)
+        Me.ToolStripEx1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
-    Friend WithEvents KeluarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MasterToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SubUnitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PegawaiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents JadwalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RibbonControlUtama As Syncfusion.Windows.Forms.Tools.RibbonControlAdv
+    Private WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Private WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents MenuMaster As Syncfusion.Windows.Forms.Tools.ToolStripTabItem
+    Friend WithEvents MenuPesanan As Syncfusion.Windows.Forms.Tools.ToolStripTabItem
+    Friend WithEvents ToolStripEx1 As Syncfusion.Windows.Forms.Tools.ToolStripEx
+    Friend WithEvents btnLogin As ToolStripButton
+    Friend WithEvents btnLogout As ToolStripButton
+    Friend WithEvents btnExit As ToolStripButton
 End Class

@@ -19,7 +19,8 @@ Module ModuleConnection
     Public DSYSQL As DataSet
 
     Public Sub koneksiMysql()
-        MYDBMYSQL = "Provider=MSDASQL;Driver={Mysql ODBC 3.5 ANSI Driver};Server=localhost;Database=db_aplikasi;User=megono;Password=password123$$;Option=3"
+        'CONNECDTION WITH MARIADB USE ODBC 3.51
+        MYDBMYSQL = "Driver={MySQL ODBC 3.51 Driver};Server=localhost;Port=3306;Database=db_radjaexpress_v2;User=megono;Password=password123$$;Option=3"
 
         ConnectMYSQL = New OdbcConnection(MYDBMYSQL)
         If ConnectMYSQL.State = ConnectionState.Closed Then ConnectMYSQL.Open()

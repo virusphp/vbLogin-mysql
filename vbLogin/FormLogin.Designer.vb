@@ -28,6 +28,7 @@ Partial Class FormLogin
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbShoPassword = New System.Windows.Forms.CheckBox()
         Me.btnKeluar = New System.Windows.Forms.Button()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -36,16 +37,16 @@ Partial Class FormLogin
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.panelLogo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.panelLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -82,6 +83,7 @@ Partial Class FormLogin
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cbShoPassword)
         Me.Panel1.Controls.Add(Me.btnKeluar)
         Me.Panel1.Controls.Add(Me.btnLogin)
         Me.Panel1.Controls.Add(Me.txtPassword)
@@ -90,23 +92,34 @@ Partial Class FormLogin
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(185, 155)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(298, 100)
+        Me.Panel1.Size = New System.Drawing.Size(298, 107)
         Me.Panel1.TabIndex = 11
+        '
+        'cbShoPassword
+        '
+        Me.cbShoPassword.AutoSize = True
+        Me.cbShoPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbShoPassword.Location = New System.Drawing.Point(79, 61)
+        Me.cbShoPassword.Name = "cbShoPassword"
+        Me.cbShoPassword.Size = New System.Drawing.Size(92, 16)
+        Me.cbShoPassword.TabIndex = 14
+        Me.cbShoPassword.Text = "Show Password"
+        Me.cbShoPassword.UseVisualStyleBackColor = True
         '
         'btnKeluar
         '
-        Me.btnKeluar.Location = New System.Drawing.Point(205, 71)
+        Me.btnKeluar.Location = New System.Drawing.Point(184, 78)
         Me.btnKeluar.Name = "btnKeluar"
-        Me.btnKeluar.Size = New System.Drawing.Size(75, 23)
+        Me.btnKeluar.Size = New System.Drawing.Size(97, 23)
         Me.btnKeluar.TabIndex = 12
         Me.btnKeluar.Text = "Keluar"
         Me.btnKeluar.UseVisualStyleBackColor = True
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(124, 71)
+        Me.btnLogin.Location = New System.Drawing.Point(79, 78)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogin.Size = New System.Drawing.Size(98, 23)
         Me.btnLogin.TabIndex = 11
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -115,6 +128,7 @@ Partial Class FormLogin
         '
         Me.txtPassword.Location = New System.Drawing.Point(79, 39)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(202, 20)
         Me.txtPassword.TabIndex = 10
         '
@@ -157,20 +171,6 @@ Partial Class FormLogin
         Me.panelLogo.Size = New System.Drawing.Size(152, 131)
         Me.panelLogo.TabIndex = 12
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox1.Image = Global.vbLogin.My.Resources.Resources.logo_login
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(152, 131)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
-        '
         'Label6
         '
         Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -205,12 +205,34 @@ Partial Class FormLogin
         '
         'PictureBox2
         '
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox2.ErrorImage = Global.vbLogin.My.Resources.Resources.profil_login
+        Me.PictureBox2.Image = Global.vbLogin.My.Resources.Resources.profil_login
+        Me.PictureBox2.InitialImage = Global.vbLogin.My.Resources.Resources.profil_login
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(107, 125)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.vbLogin.My.Resources.Resources.logo_login1
+        Me.PictureBox1.InitialImage = Global.vbLogin.My.Resources.Resources.logo_login1
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(152, 131)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'FormLogin
         '
@@ -230,9 +252,9 @@ Partial Class FormLogin
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.panelLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,4 +276,5 @@ Partial Class FormLogin
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents cbShoPassword As CheckBox
 End Class
