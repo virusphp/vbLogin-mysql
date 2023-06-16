@@ -248,6 +248,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FormLogin"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

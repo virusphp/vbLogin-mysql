@@ -28,14 +28,18 @@ Partial Class FormMenuUtama
         Me.RibbonControlUtama = New Syncfusion.Windows.Forms.Tools.RibbonControlAdv()
         Me.MenuMaster = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
         Me.ToolStripEx1 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
+        Me.MenuPesanan = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
+        Me.ToolStripEx2 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
         Me.btnLogin = New System.Windows.Forms.ToolStripButton()
         Me.btnLogout = New System.Windows.Forms.ToolStripButton()
         Me.btnExit = New System.Windows.Forms.ToolStripButton()
-        Me.MenuPesanan = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
+        Me.btnPesanan = New System.Windows.Forms.ToolStripButton()
         CType(Me.RibbonControlUtama, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RibbonControlUtama.SuspendLayout()
         Me.MenuMaster.Panel.SuspendLayout()
         Me.ToolStripEx1.SuspendLayout()
+        Me.MenuPesanan.Panel.SuspendLayout()
+        Me.ToolStripEx2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -67,11 +71,12 @@ Partial Class FormMenuUtama
         Me.RibbonControlUtama.OfficeMenu.Name = "OfficeMenu"
         Me.RibbonControlUtama.OfficeMenu.ShowItemToolTips = True
         Me.RibbonControlUtama.OfficeMenu.Size = New System.Drawing.Size(12, 65)
+        Me.RibbonControlUtama.QuickPanelImage = Global.vbLogin.My.Resources.Resources.logo_login1
         Me.RibbonControlUtama.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.RibbonControlUtama.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None
-        Me.RibbonControlUtama.SelectedTab = Me.MenuMaster
+        Me.RibbonControlUtama.SelectedTab = Me.MenuPesanan
         Me.RibbonControlUtama.ShowRibbonDisplayOptionButton = True
-        Me.RibbonControlUtama.Size = New System.Drawing.Size(753, 130)
+        Me.RibbonControlUtama.Size = New System.Drawing.Size(929, 120)
         Me.RibbonControlUtama.SystemText.QuickAccessDialogDropDownName = "Start menu"
         Me.RibbonControlUtama.SystemText.RenameDisplayLabelText = "&Display Name:"
         Me.RibbonControlUtama.TabIndex = 2
@@ -107,8 +112,39 @@ Partial Class FormMenuUtama
         Me.ToolStripEx1.Location = New System.Drawing.Point(0, 1)
         Me.ToolStripEx1.Name = "ToolStripEx1"
         Me.ToolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ToolStripEx1.Size = New System.Drawing.Size(282, 74)
+        Me.ToolStripEx1.Size = New System.Drawing.Size(282, 64)
         Me.ToolStripEx1.TabIndex = 0
+        '
+        'MenuPesanan
+        '
+        Me.MenuPesanan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuPesanan.Name = "MenuPesanan"
+        '
+        'RibbonControlUtama.RibbonPanel2
+        '
+        Me.MenuPesanan.Panel.Controls.Add(Me.ToolStripEx2)
+        Me.MenuPesanan.Panel.Name = "RibbonPanel2"
+        Me.MenuPesanan.Panel.ScrollPosition = 0
+        Me.MenuPesanan.Panel.TabIndex = 3
+        Me.MenuPesanan.Panel.Text = "Pemesanan"
+        Me.MenuPesanan.Position = 1
+        Me.MenuPesanan.Size = New System.Drawing.Size(76, 21)
+        Me.MenuPesanan.Tag = "2"
+        Me.MenuPesanan.Text = "Pemesanan"
+        '
+        'ToolStripEx2
+        '
+        Me.ToolStripEx2.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStripEx2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.ToolStripEx2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.ToolStripEx2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStripEx2.Image = Nothing
+        Me.ToolStripEx2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnPesanan})
+        Me.ToolStripEx2.Location = New System.Drawing.Point(0, 1)
+        Me.ToolStripEx2.Name = "ToolStripEx2"
+        Me.ToolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ToolStripEx2.Size = New System.Drawing.Size(127, 64)
+        Me.ToolStripEx2.TabIndex = 0
         '
         'btnLogin
         '
@@ -140,31 +176,26 @@ Partial Class FormMenuUtama
         Me.btnExit.Size = New System.Drawing.Size(75, 53)
         Me.btnExit.Text = "Exit"
         '
-        'MenuPesanan
+        'btnPesanan
         '
-        Me.MenuPesanan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuPesanan.Name = "MenuPesanan"
-        '
-        'RibbonControlUtama.RibbonPanel2
-        '
-        Me.MenuPesanan.Panel.Name = "RibbonPanel2"
-        Me.MenuPesanan.Panel.ScrollPosition = 0
-        Me.MenuPesanan.Panel.TabIndex = 3
-        Me.MenuPesanan.Panel.Text = "Pesanan"
-        Me.MenuPesanan.Position = 1
-        Me.MenuPesanan.Size = New System.Drawing.Size(58, 21)
-        Me.MenuPesanan.Tag = "2"
-        Me.MenuPesanan.Text = "Pesanan"
+        Me.btnPesanan.AutoSize = False
+        Me.btnPesanan.Image = Global.vbLogin.My.Resources.Resources.menu_pesanan_transparan
+        Me.btnPesanan.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnPesanan.Name = "btnPesanan"
+        Me.btnPesanan.Size = New System.Drawing.Size(120, 53)
+        Me.btnPesanan.Text = "Surat Pesanan"
         '
         'FormMenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.vbLogin.My.Resources.Resources.logo_login
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(753, 458)
+        Me.ClientSize = New System.Drawing.Size(929, 532)
         Me.Controls.Add(Me.RibbonControlUtama)
         Me.IsMdiContainer = True
         Me.Name = "FormMenuUtama"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistem Informasi Gudang Farmasi"
         CType(Me.RibbonControlUtama, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RibbonControlUtama.ResumeLayout(False)
@@ -173,6 +204,10 @@ Partial Class FormMenuUtama
         Me.MenuMaster.Panel.PerformLayout()
         Me.ToolStripEx1.ResumeLayout(False)
         Me.ToolStripEx1.PerformLayout()
+        Me.MenuPesanan.Panel.ResumeLayout(False)
+        Me.MenuPesanan.Panel.PerformLayout()
+        Me.ToolStripEx2.ResumeLayout(False)
+        Me.ToolStripEx2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -185,4 +220,6 @@ Partial Class FormMenuUtama
     Friend WithEvents btnLogin As ToolStripButton
     Friend WithEvents btnLogout As ToolStripButton
     Friend WithEvents btnExit As ToolStripButton
+    Friend WithEvents ToolStripEx2 As Syncfusion.Windows.Forms.Tools.ToolStripEx
+    Friend WithEvents btnPesanan As ToolStripButton
 End Class

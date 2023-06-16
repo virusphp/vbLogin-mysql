@@ -3,11 +3,11 @@
         Me.Close()
     End Sub
 
-    Sub Terbuka()
-        FormMenuUtama.btnLogin.Enabled = False
-        FormMenuUtama.MenuPesanan.Enabled = True
-        FormMenuUtama.btnLogout.Enabled = True
-        FormMenuUtama.btnExit.Enabled = True
+
+
+    Sub ClearFormLogin()
+        txtUsername.Clear()
+        txtPassword.Clear()
     End Sub
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
@@ -25,7 +25,7 @@
 
             If RDMYSQL.HasRows Then
                 Me.Close()
-                Call Terbuka()
+                Call FormMenuUtama.Terbuka()
             Else
                 MsgBox("Username dan password tidak sesuai / Salah!")
             End If
@@ -50,7 +50,7 @@
                 passed = passBcrypt.BCryptVerify(password, passString)
                 If passed = True Then
                     Me.Close()
-                    Call Terbuka()
+                    Call FormMenuUtama.Terbuka()
                 Else
                     MsgBox("Password tidak sesuai atau tidak sama!")
                 End If
@@ -72,5 +72,9 @@
         Else
             txtPassword.PasswordChar = "*"
         End If
+    End Sub
+
+    Private Sub FormLogin_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ClearFormLogin()
     End Sub
 End Class

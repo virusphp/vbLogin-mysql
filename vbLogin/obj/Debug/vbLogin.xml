@@ -47,6 +47,11 @@ vbLogin
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:vbLogin.My.Resources.Resources.menu_pesanan_transparan">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:vbLogin.My.Resources.Resources.obat_transparan">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
