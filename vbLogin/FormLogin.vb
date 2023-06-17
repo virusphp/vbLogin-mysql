@@ -35,7 +35,8 @@
     Sub LoginMYSQLCrypt(ByVal username As String, ByVal password As String)
         Dim passBcrypt As New Chilkat.Crypt2
         Dim passed As Boolean = False
-        Dim passString As String
+        Dim passHashed As String
+        Dim passReplace As String
 
         If username = "" Or password = "" Then
             MsgBox("Username atau Password tidak boleh kosong")
@@ -45,9 +46,10 @@
             RDMYSQL = CMDMYSQL.ExecuteReader
             RDMYSQL.Read()
 
-            passString = RDMYSQL.Item("password").ToString
+            passHashed = RDMYSQL.Item("password").ToString
+            passReplace = passHashed.Replace("$2y", "$2a")
             If RDMYSQL.HasRows And username = RDMYSQL.Item("username").ToString Then
-                passed = passBcrypt.BCryptVerify(password, passString)
+                passed = passBcrypt.BCryptVerify(password, passReplace)
                 If passed = True Then
                     Me.Close()
                     Call FormMenuUtama.Terbuka()

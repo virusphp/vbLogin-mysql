@@ -1,0 +1,4 @@
+Untuk Kasus ODBC MYSQL dengan mesin 64bit
+
+Harus install ODBC versi sesuai MYSQL dengan versi 64bit dan 32bit
+kedua Driver ODBC tersebut harus di install bersama untuk melakukan connection string

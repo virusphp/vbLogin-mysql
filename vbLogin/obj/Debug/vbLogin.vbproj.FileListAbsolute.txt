@@ -29,3 +29,25 @@ C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\Syncfusion.SpellChecker.
 C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\Syncfusion.Tools.Base.xml
 C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\Syncfusion.Tools.Windows.xml
 C:\Users\SETSUGA\source\repos\vbLogin\vbLogin\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\vbLogin.exe.config
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\vbLogin.exe
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\vbLogin.pdb
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\vbLogin.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Grid.Base.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Grid.Windows.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Shared.Base.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Shared.Windows.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.SpellChecker.Base.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Tools.Base.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Tools.Windows.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.vbprojAssemblyReference.cache
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.FormLogin.resources
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.FormMenuUtama.resources
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.Resources.resources
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.vbproj.GenerateResource.cache
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.vbproj.CoreCompileInputs.cache
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.vbproj.CopyComplete
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.exe
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.xml
+D:\DOT NET\vbLogin-mysql\vbLogin\obj\Debug\vbLogin.pdb

@@ -28,11 +28,11 @@ Partial Class FormMenuUtama
         Me.RibbonControlUtama = New Syncfusion.Windows.Forms.Tools.RibbonControlAdv()
         Me.MenuMaster = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
         Me.ToolStripEx1 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
-        Me.MenuPesanan = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
-        Me.ToolStripEx2 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
         Me.btnLogin = New System.Windows.Forms.ToolStripButton()
         Me.btnLogout = New System.Windows.Forms.ToolStripButton()
         Me.btnExit = New System.Windows.Forms.ToolStripButton()
+        Me.MenuPesanan = New Syncfusion.Windows.Forms.Tools.ToolStripTabItem()
+        Me.ToolStripEx2 = New Syncfusion.Windows.Forms.Tools.ToolStripEx()
         Me.btnPesanan = New System.Windows.Forms.ToolStripButton()
         CType(Me.RibbonControlUtama, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RibbonControlUtama.SuspendLayout()
@@ -74,7 +74,7 @@ Partial Class FormMenuUtama
         Me.RibbonControlUtama.QuickPanelImage = Global.vbLogin.My.Resources.Resources.logo_login1
         Me.RibbonControlUtama.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.RibbonControlUtama.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None
-        Me.RibbonControlUtama.SelectedTab = Me.MenuPesanan
+        Me.RibbonControlUtama.SelectedTab = Me.MenuMaster
         Me.RibbonControlUtama.ShowRibbonDisplayOptionButton = True
         Me.RibbonControlUtama.Size = New System.Drawing.Size(929, 120)
         Me.RibbonControlUtama.SystemText.QuickAccessDialogDropDownName = "Start menu"
@@ -115,6 +115,36 @@ Partial Class FormMenuUtama
         Me.ToolStripEx1.Size = New System.Drawing.Size(282, 64)
         Me.ToolStripEx1.TabIndex = 0
         '
+        'btnLogin
+        '
+        Me.btnLogin.AutoSize = False
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Image = Global.vbLogin.My.Resources.Resources.kunci
+        Me.btnLogin.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(100, 53)
+        Me.btnLogin.Text = "Login"
+        '
+        'btnLogout
+        '
+        Me.btnLogout.AutoSize = False
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Image = Global.vbLogin.My.Resources.Resources.logout
+        Me.btnLogout.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(100, 53)
+        Me.btnLogout.Text = "Logout"
+        '
+        'btnExit
+        '
+        Me.btnExit.AutoSize = False
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Image = Global.vbLogin.My.Resources.Resources._exit
+        Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 53)
+        Me.btnExit.Text = "Exit"
+        '
         'MenuPesanan
         '
         Me.MenuPesanan.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -145,36 +175,6 @@ Partial Class FormMenuUtama
         Me.ToolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ToolStripEx2.Size = New System.Drawing.Size(127, 64)
         Me.ToolStripEx2.TabIndex = 0
-        '
-        'btnLogin
-        '
-        Me.btnLogin.AutoSize = False
-        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Image = Global.vbLogin.My.Resources.Resources.kunci
-        Me.btnLogin.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(100, 53)
-        Me.btnLogin.Text = "Login"
-        '
-        'btnLogout
-        '
-        Me.btnLogout.AutoSize = False
-        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Image = Global.vbLogin.My.Resources.Resources.logout
-        Me.btnLogout.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(100, 53)
-        Me.btnLogout.Text = "Logout"
-        '
-        'btnExit
-        '
-        Me.btnExit.AutoSize = False
-        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.vbLogin.My.Resources.Resources._exit
-        Me.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 53)
-        Me.btnExit.Text = "Exit"
         '
         'btnPesanan
         '
