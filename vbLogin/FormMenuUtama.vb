@@ -1,4 +1,7 @@
-﻿Public Class FormMenuUtama
+﻿Imports Syncfusion.Windows.Forms.Tools
+
+Public Class FormMenuUtama
+    Inherits RibbonForm
 
     Sub Terkunci()
         btnLogin.Enabled = True
@@ -15,6 +18,7 @@
     End Sub
 
     Private Sub FormMenuUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.IsMdiContainer = True
         Call Terkunci()
     End Sub
 
@@ -29,4 +33,5 @@
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Call Terkunci()
     End Sub
+
 End Class

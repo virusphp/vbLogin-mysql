@@ -27,7 +27,7 @@ Module ModuleConnection
     End Sub
 
     Public Sub koneksiSQL()
-        MYDBSQL = "Data Source=192.168.0.205\SQL2008;initial catalog=DBSIMRS;integreted security=true"
+        MYDBSQL = "Server=192.168.0.205\SQL2008; Database=DBSIMRS; User ID=sa; Password=RSUDserver2014"
         ConnectSQL = New SqlConnection(MYDBSQL)
         If ConnectSQL.State = ConnectionState.Closed Then ConnectSQL.Open()
     End Sub

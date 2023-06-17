@@ -1,4 +1,9 @@
-﻿Public Class FormLogin
+﻿Imports System.Data.SqlClient
+Imports Syncfusion.Windows.Forms
+
+Public Class FormLogin
+    Inherits Office2010Form
+
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
@@ -12,24 +17,6 @@
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
         Me.Close()
-    End Sub
-
-    Sub LoginMYSQL(ByVal username As String, ByVal password As String)
-        If txtUsername.Text = "" Or txtPassword.Text = "" Then
-            MsgBox("Username atau Password tidak boleh kosong")
-        Else
-            Call koneksiMysql()
-            CMDMYSQL = New Odbc.OdbcCommand("select * from users where username='" & txtUsername.Text & "' and password='" & txtPassword.Text & "'", ConnectMYSQL)
-            RDMYSQL = CMDMYSQL.ExecuteReader
-            RDMYSQL.Read()
-
-            If RDMYSQL.HasRows Then
-                Me.Close()
-                Call FormMenuUtama.Terbuka()
-            Else
-                MsgBox("Username dan password tidak sesuai / Salah!")
-            End If
-        End If
     End Sub
 
     Sub LoginMYSQLCrypt(ByVal username As String, ByVal password As String)
@@ -64,8 +51,41 @@
         End If
     End Sub
 
+    Sub LoginSQLCrypt(ByVal username As String, ByVal password As String)
+        Dim passBcrypt As New Chilkat.Crypt2
+        Dim passed As Boolean = False
+        Dim passHashed As String
+        Dim passReplace As String
+
+        If username = "" Or password = "" Then
+            MsgBox("Username atau Password tidak boleh kosong")
+        Else
+            Call koneksiSQL()
+            CMDSQL = New SqlCommand("select * from users where username='" & username & "'", ConnectSQL)
+            RDSQL = CMDSQL.ExecuteReader
+            RDSQL.Read()
+
+            passHashed = RDSQL.Item("password").ToString
+            passReplace = passHashed.Replace("$2y", "$2a")
+            If RDSQL.HasRows And username = RDSQL.Item("username").ToString Then
+                passed = passBcrypt.BCryptVerify(password, passReplace)
+                If passed = True Then
+                    Me.Close()
+                    Call FormMenuUtama.Terbuka()
+                Else
+                    MsgBox("Password tidak sesuai atau tidak sama!")
+                End If
+
+            Else
+                MsgBox("Username ditemukan atau tidak terdaftar!")
+            End If
+            RDSQL.Close()
+        End If
+    End Sub
+
+
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        LoginMYSQLCrypt(txtUsername.Text, txtPassword.Text)
+        LoginSQLCrypt(txtUsername.Text, txtPassword.Text)
     End Sub
 
     Private Sub cbShoPassword_CheckedChanged(sender As Object, e As EventArgs) Handles cbShoPassword.CheckedChanged
